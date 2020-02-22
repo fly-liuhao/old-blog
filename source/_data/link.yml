@@ -1,0 +1,27 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: Sheey的小窝杂货铺
+      link: https://sheey.moe/
+      avatar: https://sheey-blog-resources.oss-cn-hangzhou.aliyuncs.com/images/avatar.png
+      descr: 博客写的很不错
+    2:
+      name: 友人C
+      link: https://www.ihewro.com/
+      avatar: https://www.ihewro.com/usr/uploads/2020/02/863730882.jpg
+      descr: 这个是真的大佬
+
+class2:  
+  class_name: 链接无效
+  link_list:
+   1:
+     name: 是老胡没错
+     link: https://jerryc.me/
+     avatar: https://tvax2.sinaimg.cn/crop.0.0.664.664.180/00614xNZly8gb7n3o61c0j30ig0ihtaf.jpg
+     descr: 微博vlog博主
+   2:
+     name: Wuli_秀秀
+     link: https://jerryc.me/
+     avatar: https://tvax2.sinaimg.cn/crop.0.0.996.996.180/c235c8e5ly8g36uoelgi7j20ro0rojvc.jpg
+     descr: 永远保持好奇和想象

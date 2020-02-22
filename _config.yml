@@ -1,3 +1,5 @@
+# 站点配置文件
+
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
@@ -9,7 +11,7 @@ description: '心情，日记，随笔，读后感'
 keywords: 'Hexo，Github，博客'
 author: Hao Liu
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -101,3 +103,34 @@ deploy:
   type: git
   repo: git@github.com:fly-liuhao/fly-liuhao.github.io.git
   branch: master
+
+# 音乐播放插件
+aplayer:
+  meting: true
+
+# 书籍、电影插件
+douban:
+  user: 175423653 # 你的豆瓣ID
+  builtin: true # 是否将生成页面的功能嵌入hexo s和hexo g中
+  book:
+    title: '那些年,我看過的書籍'
+    quote: '世界上任何的书籍都不能带给你好运，但是它们能让你悄悄的成为你自己'
+  movie:
+    title: '那些年,我看過的電影'
+    quote: '过去、现在、未来'
+  timeout: 10000
+
+# offline config passed to sw-precache.
+offline:
+  maximumFileSizeToCacheInBytes: 10485760 # 缓存的最大文件大小，以字节为单位
+  staticFileGlobs:
+    - public/**/*.{js,html,css,png,jpg,gif,svg,webp,eot,ttf,woff,woff2}
+  # 静态文件合集，如果你的站点使用了例如webp格式的文件，请将文件类型添加进去。
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    # CDNs - should be cacheFirst, since they should be used specific versions so should not change
+    - urlPattern: /* # 如果你需要加载CDN资源，请配置该选项，如果没有，可以不配置。
+      handler: cacheFirst
+      options:
+        origin: https://fly-liuhao.github.io/ # 可替换成你的 url
