@@ -120,6 +120,7 @@ douban:
     quote: '过去、现在、未来'
   timeout: 10000
 
+# 实现 PWA 渐进式应用
 # offline config passed to sw-precache.
 offline:
   maximumFileSizeToCacheInBytes: 10485760 # 缓存的最大文件大小，以字节为单位

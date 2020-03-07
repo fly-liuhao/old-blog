@@ -115,7 +115,7 @@
         copyright: 是否显示版权 （除非特定文章设置，可以不写）
         mathjax:
         katex:
-        hide:
+        hide: （是否想要隐藏文章）
         ---
        ```
 
@@ -123,9 +123,10 @@
 	- 标签页：
         输入`hexo new page tags`
         修改`source/tags/index.md`文件如下：
+        
         ```java
-        ---
-	     title: 标籤
+	     ---
+        title: 标籤
         date: 2018-01-05 00:00:00
         type: "tags"
         ---
@@ -212,21 +213,21 @@
         ---
         title: 那些年，听过的音乐
         type: "music"
-     comments: true
-     top_img: https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/music.jpg
-     date: 2020-02-19 11:59:50
-     description: 轻抚受伤的心灵
-     mathjax:
-     katex:
-     ---
-   
-     # 聆听这个世界
-     {% meting "551340498" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}
-     ---
-     # OH MY GIRL
-     {% meting "3175659640" "netease" "playlist" "theme:#555" "volume:0.5" "mutex:true" "listmaxheight:340px" "preload:auto" %}
+           	comments: true
+           	top_img: https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/music.jpg
+           	date: 2020-02-19 11:59:50
+           	description: 轻抚受伤的心灵
+           	mathjax:
+           	katex:
+           	---
+           	 
+           	# 聆听这个世界
+           	{% meting "551340498" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %}
+           	---
+           	# OH MY GIRL
+           	{% meting "3175659640" "netease" "playlist" "theme:#555" "volume:0.5" "mutex:true" "listmaxheight:340px" "preload:auto" %}
      ```
-   
+
 7. 电影页面
 	> 参考链接：https://github.com/mythsman/hexo-douban
 	- 安装插件：`npm install hexo-douban --save`
@@ -249,7 +250,7 @@
 		> 1. 需要注意的是，通常大家都喜欢用`hexo d`来作为`hexo deploy`命令的简化，但是当安装了`hexo douban`之后，就不能用`hexo d`了，因为`hexo douban`跟`hexo deploy`的前缀都是`hexo d`
 		>
 		> 2.  如果builtin属性设置为：true，则每次不需要执行该命令，直接使用`hexo g`生成页面即可
-	
+
 8. 关于页面
 
 ### 七、主题优化
@@ -265,9 +266,10 @@
 	- 修改主题配置
 		```java
 		laibili:
-       enable: true
-       uid: MTAyMC80ODxxxxxyNTIzNQ==
-     ```
+	   enable: true
+	   uid: MTAyMC80ODxxxxxyNTIzNQ==
+	  ```
+
 2. 使用 Valine（免费）
 	- 注册LeanCloud（需完成邮箱认证以及）
 	- 并创建一个开发版应用
@@ -299,12 +301,12 @@ class名称为：Comment
 	- Png改变大小：https://www.iloveimg.com/zh-cn/resize-image
 	- Png-svg：http://www.bejson.com/convert/image_to_svg/
 
-#### 添加本地搜索
+#### （三、）添加本地搜索
 1. 官方github链接：https://github.com/wzpan/hexo-generator-search
 2. 使用教程
 	- 安装：`npm install hexo-generator-search --save`
 
-#### 添加字数统计功能
+#### （四）添加字数统计功能
 2. 使用：
 	- 安装：`npm install hexo-wordcount --save`
 ### 七、编写文章
@@ -322,31 +324,25 @@ class名称为：Comment
 	
 	All parameters are optional.
 	```
-	
+
 2. 使用`Gallery`相册，在文章中插入图片
 	> 区别于旧版的Gallery相册,新的Gallery相册会自动根据图片长度进行排版，书写也更加方便，与markdown格式一样。可根据需要插入到相应的md
    
 	用法：
 	```markdown
 	{% gallery %}
-   markdown 图片格式
-   {% endgallery %}
-   
-   eg：
-   
-   {% gallery %}
-   ![](https://gratisography.com/wp-content/uploads/2019/10/gratisography-scary-pumpkin-hand-900x600.jpg)
-   ![](https://gratisography.com/wp-content/uploads/2019/10/gratisography-fresh-fish-dinner-900x600.jpg)
-   ![](https://gratisography.com/wp-content/uploads/2019/10/gratisography-mountain-cloud-landscape-900x600.jpg)
-   ![](https://picjumbo.com/wp-content/uploads/iphone-free-stock-photos-2210x3315.jpg)
-   ![](https://picjumbo.com/wp-content/uploads/young-millennial-girl-drinking-lemonade-and-overlooking-the-city-2210x1473.jpg)
-   ![](https://picjumbo.com/wp-content/uploads/modern-graphic-designer-essentials_free_stock_photos_picjumbo_HNCK4919-2210x1474.jpg)
-   {% endgallery %}
-   ```
-   
+markdown 图片格式
+	{% endgallery %}
+	eg：
+	   
+	{% gallery %}
+	![](https://gratisography.com/wp-content/uploads/2019/10/gratisography-scary-pumpkin-hand-900x600.jpg)
+	![](https://gratisography.com/wp-content/uploads/2019/10/gratisography-fresh-fish-dinner-900x600.jpg)
+	![](https://gratisography.com/wp-content/uploads/2019/10/gratisography-mountain-cloud-landscape-900x600.jpg)
+	![](https://picjumbo.com/wp-content/uploads/iphone-free-stock-photos-2210x3315.jpg)
+	![](https://picjumbo.com/wp-content/uploads/young-millennial-girl-drinking-lemonade-and-overlooking-the-city-2210x1473.jpg)
+	![](https://picjumbo.com/wp-content/uploads/modern-graphic-designer-essentials_free_stock_photos_picjumbo_HNCK4919-2210x1474.jpg)
+	{% endgallery %}
+	```
+	
 3. 占位，占位，占位，占位，占位，
-
-
-
-​	
-

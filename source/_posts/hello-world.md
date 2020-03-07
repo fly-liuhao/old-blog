@@ -1,6 +1,6 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: Hello World
+date: 2020-02-22 17:55:20
 tags:
 	- Java
 	- Python

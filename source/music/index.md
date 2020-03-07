@@ -3,10 +3,7 @@ title: 那些年，听过的音乐
 type: "music"
 comments: true
 top_img: https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/music.jpg
-date: 2020-02-19 11:59:50
 description: 轻抚受伤的心灵
-mathjax:
-katex:
 ---
 
 # 聆听这个世界

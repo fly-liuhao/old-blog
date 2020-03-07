@@ -12,11 +12,12 @@ menu:
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
   友链: /link/ || fa fa-link
+  留言板: /leaveamessage/ || fa fa-pencil-square-o
   关于: /about/ || fa fa-heart
   娱乐||fa fa-list:
     - Music || /music/ || fa fa-music
     - Book || /books/ || fa fa-book
-    - Gallery || /gallery/ || fa fa-picture-o
+    # - Gallery || /gallery/ || fa fa-picture-o
     - Movie || /movies/ || fa fa-film
 
 # Favicon（网站Logo）
@@ -49,15 +50,15 @@ code_word_wrap: false # true 实现代码自动换行（还需找到你站点的
 # copyright 复制的内容后面加上版权信息
 copy:
   enable: true # true 开启 / false 禁止
-  copyright: false
+  copyright: true
 
 # social settings
 # formal:
 #   icon: link
 # ---------------
 social:
-  fa fa-github: https://github.com/jerryc127
-  fa fa-envelope: mailto:xxxxxxxx@gmail.com
+  fa fa-github: https://github.com/fly-liuhao
+  fa fa-envelope: mailto:15364925795@163.com
   fa fa-rss: /atom.xml
 
 ####    search    ####
@@ -415,6 +416,7 @@ ClickShowText:
     - 友善
   fontSize: 15px
 
+
 # 头像会一直转圈
 avatar_effect: false
 
@@ -425,7 +427,7 @@ display_mode: light
 
 # 美化post页显示
 post_beautify:
-  enable: true
+  enable: false
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: "#F47466"
 
@@ -514,7 +516,7 @@ translate:
   #当文字是繁体时，按钮显示的文字
   msgToSimplifiedChinese: "简"
 
-#閲读模式
+#阅读模式
 readmode:
   enable: true
 
