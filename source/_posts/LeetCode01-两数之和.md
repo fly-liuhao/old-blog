@@ -5,7 +5,7 @@ comments: true
 toc: true
 toc_number: true
 copyright: true
-hide: false
+hide: true
 date: 2020-02-22 17:55:20
 tags:
 	- LeetCode

@@ -107,7 +107,7 @@ cover: http://lilibei.net/background/b18.jpg
 #### 2. 应用主题
 - 修改站点配置文件_config.yml，把主题改为Butterfly：`theme: Butterfly`
 #### 3. 安装 pug 以及 stylus 的渲染器
-- 如果你没有 pug 以及 stylus 的渲染器，请下载安装：`npm install hexo-renderer-pug hexo-renderer-stylus --save or yarn add hexo-renderer-pug hexo-renderer-stylus`
+- 如果你没有 pug 以及 stylus 的渲染器，请下载安装：`npm install hexo-renderer-pug hexo-renderer-stylus --save` or `yarn add hexo-renderer-pug hexo-renderer-stylus`
 #### 4. 安装cheerio
 - hexo 4.2.0版本之后 ，会出现报错 “Error: Cannot find module ‘cheerio’” 因此需要安装 cheerio：`npm install cheerio --save`
 
@@ -122,7 +122,8 @@ cover: http://lilibei.net/background/b18.jpg
 	
 #### 2. 主题配置文件平滑升级
 - 为了主题的平滑升级, Butterfly 使用了 data files 特性。
-- 推荐把主题默认的配置文件 _config.yml 复製到 Hexo 工作目录下的source/_data/butterfly.yml，如果source/_data的目录不存在那就创建一个。
+- 推荐把主题默认的配置文件 _config.yml 复制到 Hexo 工作目录下的source/_data/butterfly.yml，如果source/_data的目录不存在那就创建一个。
+  
   > 注意，如果你创建了butterfly.yml, 它将会替换主题默认配置文件_config.yml里的配置项 (不是合并而是替换), 之后你就只需要通过git pull的方式就可以平滑地升级 theme-butterfly了。
 
 #### 3. 将主题的配置文件`butterfly.yml`中的繁体字转化为简体中文
@@ -150,8 +151,8 @@ cover: http://lilibei.net/background/b18.jpg
         date: {{ date }}
         tags:（文章的标签）
         categories:（文章所属分类）
-        keywords:（关键字s）
-        description:（描述）
+        keywords:（关键字）
+        description:（文章描述）
         top_img: （除非特定需要，可以不写）
         comments  （是否显示评论，默认开启，除非设置false,可以不写）
         cover: （缩略图链接）
@@ -170,7 +171,7 @@ cover: http://lilibei.net/background/b18.jpg
 	- 修改`source/tags/index.md`文件如下：    
 		```java
 		---
-		title: 标籤
+		title: 标签
 		date: 2020-03-21 00:00:00
 		type: "tags"
 		---
@@ -239,6 +240,7 @@ cover: http://lilibei.net/background/b18.jpg
 - 关于页面
 	- 输入命令：`hexo new page about`
      - 修改`source/about/index.md`文件
+     	
      	> 这里自我发挥，博主这里放的是本人的个人简历（可以帮助找工作哦），你也可以写一些你的自我介绍，具体参考其他人的个人博客设计
 #### 6. 音乐页面
 > 参考hexo-tag-aplayer链接：[https://github.com/MoePlayer/hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
@@ -250,7 +252,7 @@ cover: http://lilibei.net/background/b18.jpg
 	 # 音乐播放插件
 	 aplayer:
 	   meting: true
-	 ```
+	```
 - 创建music目录：`hexo new page music`
 - 网易云链接：[https://music.163.com/](https://music.163.com/)
 - 修改`source/music/index.md`文件如下：
@@ -342,6 +344,7 @@ cover: http://lilibei.net/background/b18.jpg
 
 #### 2.使用PWA实现Web应用
 -  关于PWA应用
+	
 	> 直观认识：[https://www.ithome.com/0/414/429.htm](https://www.ithome.com/0/414/429.htm)
 - 使用PWA渐进式框架的网站
 	> - 实例博客1：[https://diygod.me/](https://diygod.me/)
@@ -365,10 +368,24 @@ cover: http://lilibei.net/background/b18.jpg
 - 使用教程
 	- 安装：`npm install hexo-generator-search --save`
 	- 修改主题配置文件 butterfly.yml 如下：
+		```java	
+		local_search:
+		enable: true
+		labels:
+		  input_placeholder: Search for Posts
+		  hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
+		```
 #### 4. 添加字数统计功能
 - 使用：
 	- 安装：`npm install hexo-wordcount --save`
 	- 修改主题配置文件 butterfly.yml 如下：
+		```java	
+		wordcount:
+		  enable: true
+		  post_wordcount: true
+		  min2read: true
+		  total_wordcount: true
+		```
 ### 八、关于创建文章 与 文章发布
 1. 使用next主题编写文章（注意，书写不是markdown规範，而是hexo特有的功能，移植于next主题，故在其它地方会显示不出效果）
 	> 链接：[https://theme-next.org/docs/tag-plugins/note](https://theme-next.org/docs/tag-plugins/note)
